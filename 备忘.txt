@@ -1,0 +1,5 @@
+1、flex布局好习惯：设置flex:1时，随手设置width或者height=0，这样滚动条跟文本隐藏相关的overfollow才会起作用。
+
+2、flex与ellipsis冲突，解决方法布局为flex的元素里面，再套一个Box
+
+3、overflowY: 'overlay' 不让滚动条挤压内容
