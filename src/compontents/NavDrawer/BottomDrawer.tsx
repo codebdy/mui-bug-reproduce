@@ -3,9 +3,7 @@ import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import { Paper, SvgIcon, useTheme } from '@material-ui/core';
 
-import { BottomMoreNavigation } from './BottomMoreNavigation';
 export const BottomDrawer = () => {
-  const [moreOpen, setMoreOpen] = React.useState(false);
   const [times, setTimes] = React.useState(0);
   const theme = useTheme();
 
@@ -22,9 +20,6 @@ export const BottomDrawer = () => {
   }
 
 
-  const handleCloseMore = ()=>{
-    setMoreOpen(false);
-  }
 
   return (
     <Paper 
