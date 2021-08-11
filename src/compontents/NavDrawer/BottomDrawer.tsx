@@ -31,7 +31,6 @@ export const BottomDrawer = () => {
         //display: { md: 'none', sm: 'block' } ,
         zIndex: theme.zIndex.drawer + 1,
       }} 
-      elevation={moreOpen ? 0 : 6}
     >
       click times: {times}
       <BottomNavigation
