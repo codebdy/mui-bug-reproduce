@@ -6,6 +6,7 @@ import { Paper, SvgIcon, useTheme } from '@material-ui/core';
 import { BottomMoreNavigation } from './BottomMoreNavigation';
 export const BottomDrawer = () => {
   const [moreOpen, setMoreOpen] = React.useState(false);
+  const [times, setTimes] = React.useState(0);
   const theme = useTheme();
 
 
@@ -14,9 +15,10 @@ export const BottomDrawer = () => {
    * @param event 
    */
   const toggleOpenMore = (event:React.MouseEvent)=>{
-    setMoreOpen(!moreOpen);
-    console.log('click more button')
-    event.stopPropagation();
+    //setMoreOpen(!moreOpen);
+    setTimes(times + 1);
+    //console.log('click more button')
+    //event.stopPropagation();
   }
 
 
@@ -36,6 +38,7 @@ export const BottomDrawer = () => {
       }} 
       elevation={moreOpen ? 0 : 6}
     >
+      click times: {times}
       <BottomNavigation
         showLabels
       >
@@ -49,7 +52,7 @@ export const BottomDrawer = () => {
           onClick = {toggleOpenMore} 
         />
       </BottomNavigation>
-      <BottomMoreNavigation open = {moreOpen} onClose = {handleCloseMore} />
+      {/*<BottomMoreNavigation open = {moreOpen} onClose = {handleCloseMore} />*/}
     </Paper>
   );
 }
